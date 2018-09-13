@@ -6,11 +6,9 @@
  * getFlags(arr); // [1, 2, 3, 4, 5, 6]
  */
 const getFlags = arr => {
-  let result = []
-  arr.forEach(e => {
-    result = result.concat(e.flags)
-  })
-  return result
+  return arr
+    .map(e => e.flags)
+    .reduce((accu, value) => accu.concat(value), [])
 };
 
 export default getFlags;
