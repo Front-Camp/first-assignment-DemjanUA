@@ -9,7 +9,7 @@
  */
 const turnMeBaby = str => {
   if (typeof str !== 'string') {
-    throw new Error
+    throw new Error('this is not a string')
   } else {
     return str.split('').reverse().join('')
   }
