@@ -11,7 +11,10 @@
  * sumElements([Infinity, NaN, 1]); // 1
  */
 const sumElements = arr => {
-  /* your logic here...*/
+  return arr.reduce((accu, value) => {
+    const v = typeof value === 'number' ? value.toFixed() : value
+    return Number.isFinite(parseFloat(v)) ? accu + parseFloat(value) : accu
+  }, 0)
 };
 
 export default sumElements;
